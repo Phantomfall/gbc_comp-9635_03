@@ -47,11 +47,11 @@ h2 {
 }
 
 h4 {
-	color: darkorange;
+	color: black;
 	border: 7px royalblue;
 	border-style: double;
 	padding: 2px;
-	font-family: "Lucida Console", Monaco, monospace;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 p {

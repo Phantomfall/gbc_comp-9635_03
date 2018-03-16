@@ -1,27 +1,25 @@
 var map;
 var markers = [];
-var lastInfoWindow = null
+//var lastInfoWindow = null
 
+// initialize the map and listen for any clicks to the search button
 $(document).ready(function() {
   initializeMap();
 
-  // function to initialize the map to be seen on the screen
-function initializeMap() {
-  var toronto = new google.maps.LatLng('43.6532', '-79.3832');
-  map = new google.maps.Map(document.getElementById('foursquare-map'), {
-    center: toronto,
-    zoom: 12
-  });
-}
-
-// initialize the map and listen for any clicks to the search button
   $('#map-input button').click(function() {
     var term = $('#map-input input').val();
     loadMarkersFromTerm(term);
   });
 });
 
-
+// function to initialize the map to be seen on the screen
+function initializeMap() {
+  var toronto = new google.maps.LatLng('43.6532', '-79.3832');
+  map = new google.maps.Map(document.getElementById('foursquare-map'), {
+    center: toronto,
+    zoom: 10
+  });
+}
 
 // load the markers from the term in the input box
 function loadMarkersFromTerm(term) {
@@ -40,23 +38,6 @@ function loadMarkersFromTerm(term) {
     }
   })
 }
-var infowindow = new google.maps.InfoWindow({
-          content: venue.name, 
-})
-google.maps.event.addListener(marker,"click", function ClickHandler(){
-          map.setCenter(marker.position)
-          map.setZoom(10)
-          infowindow.open(map, marker)
-          if (lastInfoWindow) {
-            lastInfoWindow.close()
-          }
-          lastInfoWindow = infowindow
-        })
-        
-        google.maps.event.addListener(infowindow,'closeclick', function(){
-          lastInfoWindow = null
-        })
-        
 
 // add the marker and its window to the map
 function addVenueMarkerOnMap(venue) {
@@ -70,6 +51,15 @@ function addVenueMarkerOnMap(venue) {
   var infoWindow = new google.maps.InfoWindow({ content: venue.name });
   google.maps.event.addListener(marker, 'click', function() {
     infoWindow.open(map, marker);
+        //if (lastInfoWindow) {
+            //lastInfoWindow.close()
+         // }
+         // lastInfoWindow = infowindow
+        //})
+        
+       // google.maps.event.addListener(infowindow,'closeclick', function(){
+          //lastInfoWindow = null
+//})
   });
 
   markers.push(marker);
@@ -82,3 +72,9 @@ function clearMap() {
   }
   markers = [];
 }
+
+//var contentString = new google.maps.InfoWIndow({
+  //content: venue.address});
+//google.maps.event.addListener(marker, "click",)functions(){
+  //response:contentString}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Toronto Craft Breweries</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+      <script src="/script.js">
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="skeleton.css">
+  </head>
+  <body>
+    <div class ="container">
+      <div class="row">
+        <div class="one column">
+        <h1>Toronto Craft Breweries</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="eleven columns">
+          <!-- <form action="#" method="GET" id="searchform">
+	           <input type="text" name="query" id="query">
+            </form> -->
+            <form id="sort" action="">
+              <input id="one" class="choice" type="radio" name="sortmethod" value="distance"><label class="option">Distance</label>
+              <input id="two" class="choice" type="radio" name="sortmethod" value="rating"><label class="option">Rating</label>
+            </form>
+        </div>
+      </div> <!-- for row-->
+      <div class="row">
+        <div id="craftbeer">
+
+        </div>
+        <div id="rating">
+
+        </div>
+        <div class="twelve columns">
+    <div id="foursquare-map">
+    </div>
+        </div>
+     </div> <!-- map row-->
+  </div> <!--main container-->
+  </body>
+</html>

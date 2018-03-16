@@ -44,3 +44,34 @@ html, body, #foursquare-map {
 	font-size:50px;
 	text-shadow: 2px 2px #000000;
 }
+.address{
+	visibility: hidden;
+	position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#info{
+	background:rgba(255, 255, 255, 0.75);
+	position: absolute;
+	height:150px;
+	top:254px;
+	left:12px;
+	padding:0;
+	width:100%;
+	display: inline-block;
+	overflow: hidden;
+}
+.moreInfo {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	color:black;
+	border: 3px red solid;
+	position: absolute;
+	top:-15px;
+}
